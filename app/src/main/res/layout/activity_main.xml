@@ -68,7 +68,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="scienceCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -103,7 +104,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="historicalCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -151,7 +153,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="natureCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -186,7 +189,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="technologyCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -234,7 +238,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="sportsCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -269,7 +274,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="generalCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -315,7 +321,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="codingCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -350,7 +357,8 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 app:cardElevation="20dp"
-                app:cardCornerRadius="20dp">
+                app:cardCornerRadius="20dp"
+                android:onClick="geographyCard">
 
                 <RelativeLayout
                     android:layout_width="match_parent"

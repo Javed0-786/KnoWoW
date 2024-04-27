@@ -16,4 +16,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
+
+    <style name="Theme.App.SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/black</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/wow</item>
+        <item name="postSplashScreenTheme">@style/Base.Theme.KnoWoW</item>
+    </style>
+
 </resources>
