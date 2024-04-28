@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.knowow.R
+import com.google.android.material.imageview.ShapeableImageView
 
 class CFRecyclerViewAdapter(private val context: Context, private val dataSet: ArrayList<FactCardModel>) : RecyclerView.Adapter<CFRecyclerViewAdapter.ViewHolder>() {
 
     // ViewHolder class to hold references to the views
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textView: TextView = view.findViewById(R.id.textView)
+        val titleImage : ShapeableImageView = view.findViewById(R.id.title_image)
     }
 
     // Create new views (invoked by the layout manager)
@@ -29,6 +31,7 @@ class CFRecyclerViewAdapter(private val context: Context, private val dataSet: A
 
         // Bind the data to the view elements
         holder.textView.text = fact.fact
+        holder.titleImage.setImageResource(fact.image)
     }
 
     // Return the size of your dataset (invoked by the layout manager)
