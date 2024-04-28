@@ -5,12 +5,12 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import kotlin.random.Random
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_item, menu)
+        menu?.findItem(R.id.myswitch)?.setActionView(R.layout.toggle_button);
         return true
     }
 
@@ -44,6 +45,20 @@ class MainActivity : AppCompatActivity() {
         return when(item.itemId){
             R.id.refresh -> {
                 displayRandomFact()
+                true
+            }
+
+            R.id.myswitch -> {
+                val switch = item.actionView?.findViewById<SwitchCompat>(R.id.switch_button)
+                switch?.setOnClickListener {
+                    if (switch.isSelected) {
+                        Toast.makeText(this, "Switch is off", Toast.LENGTH_SHORT).show()
+                        switch.isSelected = false
+                    } else {
+                        Toast.makeText(this, "Switch is on", Toast.LENGTH_SHORT).show()
+                        switch.isSelected = true
+                    }
+                }
                 true
             }
 

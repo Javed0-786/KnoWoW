@@ -12,4 +12,6 @@
     <color name="deletecolor">#DD3124</color>
     <color name="archiveColor">#3AE015</color>
     <color name="actColor">#C9B5E4</color>
+    <color name="action_icon">#6C00FD</color>
+    <color name="action_icon_light">#9555ED</color>
 </resources>

@@ -8,6 +8,12 @@
         android:orderInCategory="2"
         app:showAsAction="always"/>
 
+    <item
+        android:id="@+id/myswitch"
+        android:title=""
+        android:actionLayout="@layout/toggle_button"
+        app:showAsAction="always"/>
+
 
 
 </menu>
