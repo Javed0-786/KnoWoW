@@ -1,3 +1,54 @@
 <resources>
     <string name="app_name">KnoWoW</string>
+    <string-array name="science_facts_array">
+        <item>The speed of light in a vacuum is approximately 299,792 kilometers per second.</item>
+        <item>The human body contains about 37.2 trillion cells.</item>
+        <item>The Earth\'s atmosphere is composed of approximately 78% nitrogen and 21% oxygen.</item>
+        <item>The dinosaurs went extinct around 65 million years ago.</item>
+        <item>The universe is approximately 13.8 billion years old.</item>
+        <item>Water boils at 100 degrees Celsius (212 degrees Fahrenheit) at sea level.</item>
+        <item>The Great Barrier Reef is the largest coral reef system in the world.</item>
+        <item>The human brain contains about 86 billion neurons.</item>
+        <item>Mount Everest is the highest mountain above sea level, standing at 8,848 meters (29,029 feet).</item>
+        <item>The process of photosynthesis is how plants convert sunlight into energy.</item>
+        <item>Gravity is the force that attracts objects toward the center of the Earth.</item>
+        <item>Antibiotics are used to treat bacterial infections.</item>
+        <item>The theory of relativity was developed by Albert Einstein.</item>
+        <item>Viruses are microscopic infectious agents that can cause diseases in living organisms.</item>
+        <item>The Amazon Rainforest is the largest tropical rainforest in the world.</item>
+        <item>Newton\'s laws of motion describe the relationship between an object\'s motion and the forces acting on it.</item>
+        <item>The human body has 206 bones.</item>
+        <item>Sound travels faster through solids than through liquids and gases.</item>
+        <item>The Earth orbits the Sun once every 365.25 days.</item>
+        <item>The Milky Way galaxy is estimated to contain over 100 billion stars.</item>
+        <item>The process of nuclear fusion powers the Sun and other stars.</item>
+        <item>The human DNA contains approximately 3 billion base pairs.</item>
+        <item>The study of fossils is called paleontology.</item>
+        <item>The theory of evolution was proposed by Charles Darwin.</item>
+        <item>Thunderstorms are caused by the rapid expansion of air heated by lightning.</item>
+        <item>Chlorophyll is the pigment in plants that gives them their green color and enables photosynthesis.</item>
+        <item>The first moon landing occurred on July 20, 1969, during the Apollo 11 mission.</item>
+        <item>Electricity is the flow of electrons.</item>
+        <item>Acids have a pH less than 7, while bases have a pH greater than 7.</item>
+        <item>Plate tectonics is the theory that describes the movement of the Earth\'s lithospheric plates.</item>
+        <item>Marie Curie discovered radium and polonium and was the first woman to win a Nobel Prize.</item>
+        <item>Atoms are composed of protons, neutrons, and electrons.</item>
+        <item>The ozone layer protects the Earth from harmful ultraviolet radiation.</item>
+        <item>Archimedes\' principle states that an object submerged in a fluid experiences a buoyant force equal to the weight of the fluid it displaces.</item>
+        <item>Humans share about 98% of their DNA with chimpanzees.</item>
+        <item>Hydrogen is the most abundant element in the universe.</item>
+        <item>Albert Einstein\'s equation E=mc^2 relates mass and energy.</item>
+        <item>The Andromeda galaxy is the closest spiral galaxy to the Milky Way.</item>
+        <item>The process of sublimation occurs when a substance transitions directly from a solid to a gas without passing through the liquid state.</item>
+        <item>Carbon dioxide is a greenhouse gas that contributes to global warming.</item>
+        <item>The pH scale is a logarithmic scale used to measure the acidity or alkalinity of a solution.</item>
+        <item>Leonardo da Vinci sketched designs for a flying machine called an "ornithopter."</item>
+        <item>Light travels faster than sound, which is why we see lightning before we hear thunder.</item>
+        <item>The Hubble Space Telescope has provided astronomers with valuable insights into the universe.</item>
+        <item>The Earth\'s core is composed mainly of iron and nickel.</item>
+        <item>Mars is known as the "Red Planet" due to its iron oxide-rich surface.</item>
+        <item>The periodic table organizes chemical elements based on their atomic number and properties.</item>
+        <item>Galileo Galilei discovered the four largest moons of Jupiter.</item>
+    </string-array>
+
 </resources>
