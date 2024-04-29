@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -13,6 +14,9 @@ import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.codemybrainsout.ratingdialog.RatingDialog
+import com.google.ai.client.generativeai.BuildConfig
+import com.google.ai.client.generativeai.GenerativeModel
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -32,12 +36,12 @@ class MainActivity : AppCompatActivity() {
         displayRandomFact()
         // Change the action bar color
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.actColor)))
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_item, menu)
         menu?.findItem(R.id.myswitch)?.setActionView(R.layout.toggle_button);
+
         return true
     }
 
@@ -48,17 +52,31 @@ class MainActivity : AppCompatActivity() {
                 true
             }
 
-            R.id.myswitch -> {
-                val switch = item.actionView?.findViewById<SwitchCompat>(R.id.switch_button)
-                switch?.setOnClickListener {
-                    if (switch.isSelected) {
-                        Toast.makeText(this, "Switch is off", Toast.LENGTH_SHORT).show()
-                        switch.isSelected = false
-                    } else {
-                        Toast.makeText(this, "Switch is on", Toast.LENGTH_SHORT).show()
-                        switch.isSelected = true
-                    }
-                }
+//            R.id.myswitch -> {
+//                val switch = item.actionView?.findViewById<SwitchCompat>(R.id.switch_button)
+//                switch?.setOnClickListener {
+//                    if (switch.isSelected) {
+//                        Toast.makeText(this, "Switch is off", Toast.LENGTH_SHORT).show()
+//                        switch.isSelected = false
+//                    } else {
+//                        Toast.makeText(this, "Switch is on", Toast.LENGTH_SHORT).show()
+//                        switch.isSelected = true
+//                    }
+//                }
+//                true
+//            }
+
+            R.id.rate -> {
+
+                val ratingDialog: RatingDialog = RatingDialog.Builder(this)
+                    .threshold(3)
+                    .onThresholdCleared { dialog, rating, thresholdCleared -> Log.i("rate", "onThresholdCleared: $rating $thresholdCleared") }
+                    .onRatingBarFormSubmit { feedback -> Log.i("rate", "onRatingBarFormSubmit: $feedback") }
+                    .onRatingChanged { rating, thresholdCleared -> Log.i("rate", "onRatingChanged: $rating $thresholdCleared")
+                                        Toast.makeText(this, "Thank you for rating us $rating stars", Toast.LENGTH_SHORT).show()}
+                    .build()
+
+                ratingDialog.show()
                 true
             }
 
