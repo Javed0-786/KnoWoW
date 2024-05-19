@@ -23,7 +23,7 @@ class Gemini : AppCompatActivity() {
             val generativeModel = GenerativeModel(
                 modelName = "gemini-pro",
 //                apiKey = resources.getString(R.string.api_key)
-                apiKey = "AIzaSyBNmpjrhEqBv5uCihlbFmHyis-C8inm3nk"
+                apiKey = "apikey"
             )
 
 
