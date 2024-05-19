@@ -28,7 +28,6 @@ class CFRecyclerViewAdapter(private val context: Context, private val dataSet: A
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // Get the data item for this position
         val fact = dataSet[position]
-
         // Bind the data to the view elements
         holder.textView.text = fact.fact
         holder.titleImage.setImageResource(fact.image)

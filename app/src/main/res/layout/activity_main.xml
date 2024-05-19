@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/constraintLayout"
+        android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp">
 
         <LinearLayout
@@ -42,7 +43,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/category"
-                        android:text="Category"
+                        android:text="Did You Know!"
                         android:textSize="30sp"
                         android:textColor="@color/lavender"
                         android:fontFamily="@font/poppins_semibold"
@@ -66,7 +67,7 @@
                         android:layout_width="120dp"
                         android:layout_height="120dp"
                         android:id="@+id/randomFactImage"
-                        android:src="@drawable/coding"
+                        android:src="@drawable/general"
                         android:layout_marginEnd="16dp"
                         android:layout_alignParentEnd="true"
                         android:layout_below="@id/category"/>

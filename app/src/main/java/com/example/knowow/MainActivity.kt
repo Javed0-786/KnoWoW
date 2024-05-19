@@ -14,9 +14,13 @@ import android.widget.Toast
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.android.volley.RequestQueue
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.codemybrainsout.ratingdialog.RatingDialog
 import com.google.ai.client.generativeai.BuildConfig
 import com.google.ai.client.generativeai.GenerativeModel
+import org.json.JSONArray
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         randomFact = findViewById(R.id.randomFact)
         randomImage = findViewById(R.id.randomFactImage)
 
-        displayRandomFact()
+        processdata()
         // Change the action bar color
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.actColor)))
     }
@@ -48,7 +52,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.refresh -> {
-                displayRandomFact()
+                processdata()
                 true
             }
 
@@ -75,7 +79,6 @@ class MainActivity : AppCompatActivity() {
                     .onRatingChanged { rating, thresholdCleared -> Log.i("rate", "onRatingChanged: $rating $thresholdCleared")
                                         Toast.makeText(this, "Thank you for rating us $rating stars", Toast.LENGTH_SHORT).show()}
                     .build()
-
                 ratingDialog.show()
                 true
             }
@@ -85,26 +88,30 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun processdata() {
 
-    private fun displayRandomFact() {
-        val facts = arrayOf(R.array.science_facts_array, R.array.historical_facts_array, R.array.technology_facts_array, R.array.sports_facts_array, R.array.general_facts_array, R.array.coding_facts_array, R.array.geography_facts_array, R.array.nature_facts_array)
-        val factsCategory = arrayOf("Science", "History", "Technology", "Sports", "General", "Coding", "Geography", "Nature")
-        val random = Random.Default
-        val ranArrInd = random.nextInt(facts.size)
-        val factArray = resources.getStringArray(facts[ranArrInd])
-        val ranFactInd = random.nextInt(factArray.size)
-        randomCategory.text = factsCategory[ranArrInd]
-        randomFact.text = factArray[ranFactInd]
-        when(ranArrInd) {
-            0 -> randomImage.setImageResource(R.drawable.science)
-            1 -> randomImage.setImageResource(R.drawable.history)
-            2 -> randomImage.setImageResource(R.drawable.technology)
-            3 -> randomImage.setImageResource(R.drawable.sports)
-            4 -> randomImage.setImageResource(R.drawable.general)
-            5 -> randomImage.setImageResource(R.drawable.coding)
-            6 -> randomImage.setImageResource(R.drawable.geography)
-            7 -> randomImage.setImageResource(R.drawable.nature)
+        val stringReq = object : StringRequest(URL,
+            { response ->
+                Log.d("Responsemsg", response)
+                val jsonArray = JSONArray(response)
+                val jsonObj = jsonArray.getJSONObject(0)
+                randomFact.text = jsonObj.getString("fact")
+            },
+            { error ->
+                randomFact.text = "Error: $error"
+            }) {
+            override fun getHeaders(): MutableMap<String, String> {
+                val headers = HashMap<String, String>()
+                headers["X-Api-Key"] = "api_key"
+                return headers
+            }
         }
+        val queue: RequestQueue = Volley.newRequestQueue(this)
+        queue.add(stringReq)
+    }
+
+    companion object {
+        const val URL = "https://api.api-ninjas.com/v1/facts";
     }
 
     fun scienceCard(view: View) {
