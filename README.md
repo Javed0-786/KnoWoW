@@ -61,6 +61,6 @@ Contributions to this project are welcome and encouraged! Here's how you can con
 5. Push to the branch (`git push origin feature/your-feature`).
 6. Create a new Pull Request.
 
-![Alt Text](https://github.com/Javed0-786/KnoWoW/blob/master/ScreenShot.png)
+![Alt Text](https://github.com/Javed0-786/PrivacyPolicyKnoWow/blob/main/ScreenShot.png)
 
 ---
