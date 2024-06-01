@@ -10,7 +10,7 @@ KnoWoW is an Android mobile application designed to deliver interesting and enga
   
 - **Sleek and Intuitive Interface**: The app features a modern and user-friendly interface, ensuring a smooth navigation experience.
   
-- **API Integration (Future Scope)**: Planned integration with APIs will enable fetching facts dynamically, ensuring the content is always fresh and up-to-date.
+- **API Integration**: Integration with APIs has enabled fetching facts dynamically, ensuring the content is always fresh and up-to-date for the random fact.
   
 - **Widget Support (Future Scope)**: Integration of home screen widgets will provide users with quick access to random facts directly from their home screens.
   
@@ -39,12 +39,16 @@ KnoWoW is an Android mobile application designed to deliver interesting and enga
 ## Future Scope
 
 The project has several planned enhancements to be implemented in the future:
-
-- **API Integration**: Fetching facts dynamically from external APIs to provide a broader range of content.
   
 - **Elaborated Fact Explanations**: Utilizing advanced language models (e.g., OpenAI GPT-3.5) to generate detailed explanations for each fact.
   
 - **Image Fetching**: Integrating with image search APIs (e.g., Google Custom Search) to fetch relevant images for each fact.
+  
+- **SQL**: Using SQL DBMS to store the facts for better management of resources.
+
+- **Utilizing PHP**: To use PHP for server side programming.
+
+- **Rest APIs**: Use of REST APIs for the integration of database with the application.
   
 - **Home Screen Widgets**: Adding widgets for displaying random facts directly on the home screen.
   
